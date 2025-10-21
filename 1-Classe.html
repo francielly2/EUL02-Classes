@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Referência:
+
+    1-Vídeos
+
+    a) Programação Web 
+    Curso Javascript Completo: Aula 17 - Classes
+    https://www.youtube.com/watch?v=6CVCLVPPqis 
+
+    b) 
+    Curso de JS Aula 43 JS OO Classes e Objetos
+    https://www.youtube.com/watch?v=UtI3gXt4qT4
+    
+    2- W3bschools:
+    https://www.w3schools.com/js/js_classes.asp
+    
+    -->
+</head>
+<body>
+    <script>
+        // Definindo uma classe
+        class Artigo{
+            constructor(titulo, periodico, paginas){
+                this.tit = titulo;
+                this.period - periodico;
+                this.pag = paginas;
+            }
+            //Cria um método
+            TitArtigo(){
+                return "O título do artigo é = " + this.tit
+            }
+        }
+        //  Instanciando um objeto
+        let PublicaArt1 = new Artigo("Titulo do Artigo","Casa do Artigo", 15);
+
+        //Utilizando o objeto
+        console.log(PublicaArt1);
+        console.log(PublicaArt1.TitArtigo());
+
+        //Nova instância de um objeto da classe
+       
+
+    </script>
+    
+</body>
+</html>
