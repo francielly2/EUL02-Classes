@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programa Tabuada</h1>
+    <form name="ordem" action="" method="post">
+        Número: <input type="number" name="number"/><p></p>
+        <input type="button" name="btn_numero" value="Mostrar Tabuada" onclick="botao()"/>
+    </form>
+
+    <script>
+         var x;
+
+         button.addEventListener('click', function botao(){
+        
+        x=document.ordem.number.value;
+        
+        if(x<=0){
+            window.alert("Número Inválido");
+        }
+
+        for (num=x; num<=10; num++){
+            document.write(x, "x" + num + "=" );
+        }
+        }
+        );
+    </script>
+</body>
+</html>
