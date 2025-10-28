@@ -41,7 +41,7 @@
 
     <script>
 
-        if (submit == false) {
+        if (count === 3) {
             const carro = document.getElementById("carro").value;
             const modelo = document.getElementById("modelo").value;
             const versao = document.getElementById("versao").value;
@@ -55,6 +55,9 @@
                 this.cor = cor;
                 this.motor = motor;
             }
+                returnDetails() {
+                return `Marca: ${this.marca}, Modelo: ${this.modelo}, Ano: ${this.ano}, Cor: ${this.cor}, Motor: ${this.motor}`;
+            }
         }
 
         for (i = 1; i <= carro; i++) {
@@ -67,4 +70,5 @@
         }
     </script>
 </body>
+
 </html>
