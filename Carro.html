@@ -59,6 +59,36 @@
                 return `Marca: ${this.marca}, Modelo: ${this.modelo}, Ano: ${this.ano}, Cor: ${this.cor}, Motor: ${this.motor}`;
             }
         }
+    function addCarro() {
+    count++
+    const marca = document.getElementById('marca').value
+    const modelo = document.getElementById('modelo').value
+    const versao = document.getElementById('versao').value
+    const motor = document.getElementById('motor').value
+    const cor = document.getElementById('cor').value
+    const ano = document.getElementById('ano').value
+
+    console.log(marca, modelo, versao, motor, cor, ano)
+    carros.push(new Carro(marca, modelo, versao, motor, cor, ano))
+    console.log('carros cadastrados:', carros)
+    form.reset()
+
+    if (count === 3) confirm('Deseja visualizar os carros cadastrados?') ? mostrarCadastrados() : null
+    
+    return alert('Carro adicionado!')
+}
+
+
+function mostrarCadastrados() {
+    const pre = document.createElement('pre')
+    const code = document.createElement('code')
+    code.innerHTML = JSON.stringify(carros, null, 4)
+    pre.appendChild(code)
+    carrosDiv.appendChild(pre)
+    form.innerHTML = ''
+}
+
+btn.addEventListener('click', addCarro)
 
         for (i = 1; i <= carro; i++) {
             if (i < 3) {
@@ -72,3 +102,4 @@
 </body>
 
 </html>
+
