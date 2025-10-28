@@ -1,49 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carro</title>
 </head>
 <body>
-    <h1>Programa Carro</h1>
-    <form name="ordem" action="" method="post">
-        Digite quantos modelos de carro: <input type="text" name="carro"/><p></p>
-        <input type="button" name="btn_numero" value="Continuar" onclick="botao()"/><p></p>
-    </form>
-    <form name="ordem" action="" method="post">
-        Marca: <input type="text" name="carro"/><p></p>
-        Modelo: <input type="text" name="carro"/><p></p>
-        Versão do carro: <input type="text" name="carro"/><p></p>
-        <input type="button" name="btn_numero" value="Continuar" onclick="botao()"/>
-    </form>
-<script>
-    var n;
+    <h1>Criar um Carro</h1>
+        <fieldset>
+            <form id="formulario">
+                <h2>Informações do Carro</h2>
+                <fieldset>
 
-    for (i = 1; i <= n; i++) {
-        if (i>3) {
-            
-        } else {
-            
-        }
-        class Artigo{
-        constructor(marca, modelo, versao){
-            this.marca = marca;
-            this.modelo = modelo;
-            this.versao = versao;
-        }
-        
-        TitArtigo(){
-            return "O título do artigo é = " + this.tit
-        }
-    }
-    
-    let PublicaArt1 = new Artigo("Titulo do Artigo","Casa do Artigo", 15);
+                <label for="marca">Marca:</label> 
+                <input id="marca" type="text" placeholder="Digite a marca do carro" required/><p></p>
 
-    console.log(PublicaArt1);
-    console.log(PublicaArt1.TitArtigo());
-    }
-</script>
-    
+                <label for="modelo">Modelo:</label> 
+                <input id="modelo" type="text" placeholder="Digite o modelo do carro" required/><p></p>
+
+                <label for="versao">Versão:</label> 
+                <input id="versao" type="text" placeholder="Digite a versão do carro" required/><p></p>
+
+                </fieldset>
+
+                <h2>Mais Informações</h2>
+                <fieldset>
+                <label for="motor">Motor:</label> 
+                <input id="motor" type="text" placeholder="Digite o motor do carro" required/><p></p>
+
+                <label for="cor">Cor:</label>
+                <input id="cor" type="text" placeholder="Digite a cor do carro" required/><p></p>
+
+                <label for="ano">Ano:</label>
+                <input id="ano" type="text" placeholder="Digite o ano do carro" required/><p></p>
+
+                </fieldset>
+                <p></p><input type="submit" value="Enviar"/><p></p>
+            </form>
+        </fieldset>
+
+    <script>
+
+        if (submit == false) {
+            const carro = document.getElementById("carro").value;
+            const modelo = document.getElementById("modelo").value;
+            const versao = document.getElementById("versao").value;
+            document.write("Você tem " + carro + " carro(s), modelo " + modelo + " versão " + versao);
+            
+            class Carro {
+            constructor(marca, modelo, ano, cor, motor) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.ano = ano;
+                this.cor = cor;
+                this.motor = motor;
+            }
+        }
+
+        for (i = 1; i <= carro; i++) {
+            if (i < 3) {
+                var carro = new Carro("Marca" + i, "Modelo" + i, "Ano" + i, "Cor" + i, "Motor" + i);
+            } else {
+                alert("Limite de carros atingido");
+            }
+        }
+        }
+    </script>
 </body>
 </html>
